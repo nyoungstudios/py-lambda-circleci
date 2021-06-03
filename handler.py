@@ -4,6 +4,7 @@ import sys
 def lambda_handler(event, context):
     logger = logging.getLogger('test')
 
+    # https://forum.serverless.com/t/python-lambda-logging-duplication-workaround/1585
     logging.getLogger().handlers = []
 
     h = logging.StreamHandler(sys.stdout)

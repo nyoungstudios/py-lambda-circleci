@@ -1,0 +1,23 @@
+# reference: https://www.serverless.com/framework/docs/providers/aws/guide/serverless.yml/
+# dynamodb permissions: https://www.serverless.com/blog/abcs-of-iam-permissions
+
+service: circle-test
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: python3.8
+  region: us-west-1
+  timeout: 45
+  logRetentionInDays: 90
+
+functions:
+  circle:
+    handler: handler.lambda_handler
+    description: AWS Lambda function to test CircleCI
+    maximumRetryAttempts: 0
+    events:
+      - schedule:
+          description: Calls CircleCI lambda function
+          rate: cron(*/1 * * * ? *)

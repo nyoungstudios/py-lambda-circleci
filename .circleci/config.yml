@@ -11,7 +11,7 @@ jobs:
        - checkout
        - aws-cli/setup
        - serverless/setup
-       - run: sls deploy
+       - run: sls deploy -v
 workflows:
   step-one:
     jobs:

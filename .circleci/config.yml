@@ -11,8 +11,13 @@ jobs:
        - checkout
        - aws-cli/setup
        - serverless/setup
-       - run: npm i
-       - run: sls deploy -v
+       - run:
+           name: "Install npm packages"
+           command: npm i
+       - run:
+           name: "Deploy"
+           command: sls deploy -v
+
 workflows:
   step-one:
     jobs:

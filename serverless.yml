@@ -12,8 +12,8 @@ provider:
   logRetentionInDays: 90
 
 package:
-  exclude:
-  - .circleci/**
+  patterns:
+  - !.circleci/**
 
 functions:
   circle:

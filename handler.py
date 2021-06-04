@@ -1,4 +1,5 @@
 import logging
+import requests
 import sys
 
 def lambda_handler(event, context):
@@ -17,6 +18,10 @@ def lambda_handler(event, context):
 
 
     logger.info('Starting lambda function...')
+
+    output = requests.get('https://api.github.com')
+
+    logger.info(output)
 
     logger.info('end of lambda function')
 

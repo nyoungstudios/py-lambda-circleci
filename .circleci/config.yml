@@ -11,6 +11,7 @@ jobs:
        - checkout
        - aws-cli/setup
        - serverless/setup
+       - run: npn i
        - run: sls deploy -v
 workflows:
   step-one:

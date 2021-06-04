@@ -1,0 +1,17 @@
+{
+  "name": "circle-test",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nyoungstudios/circle-test.git"
+  },
+  "author": "Nathaniel Young",
+  "bugs": {
+    "url": "https://github.com/nyoungstudios/circle-test/issues"
+  },
+  "homepage": "https://github.com/nyoungstudios/circle-test#readme",
+  "dependencies": {
+    "serverless-python-requirements": "^5.1.1"
+  }
+}

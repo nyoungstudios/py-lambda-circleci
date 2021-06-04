@@ -1,5 +1,4 @@
 # reference: https://www.serverless.com/framework/docs/providers/aws/guide/serverless.yml/
-# dynamodb permissions: https://www.serverless.com/blog/abcs-of-iam-permissions
 
 service: circle-test
 
@@ -21,3 +20,10 @@ functions:
       - schedule:
           description: Calls CircleCI lambda function
           rate: cron(*/1 * * * ? *)
+
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: non-linux

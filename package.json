@@ -11,7 +11,7 @@
     "url": "https://github.com/nyoungstudios/circle-test/issues"
   },
   "homepage": "https://github.com/nyoungstudios/circle-test#readme",
-  "dependencies": {
+  "devDependencies": {
     "serverless-python-requirements": "^5.1.1"
   }
 }

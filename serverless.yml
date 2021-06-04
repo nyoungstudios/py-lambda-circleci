@@ -13,7 +13,7 @@ provider:
 
 package:
   patterns:
-  - !.circleci/**
+  - "!.circleci/**"
 
 functions:
   circle:

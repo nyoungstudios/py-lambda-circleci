@@ -7,13 +7,20 @@ frameworkVersion: '2'
 provider:
   name: aws
   runtime: python3.8
+  stage: dev
   region: us-west-1
   timeout: 45
   logRetentionInDays: 90
+  deploymentBucket:
+    name: ${self:service}-${self:provider.stage}-serverlessdeploymentbucket
+  lambdaHashingVersion: 20201221
+
 
 package:
   patterns:
-  - "!.circleci/**"
+  - '!.circleci/**'
+  - requirements.txt
+  - README.md
 
 functions:
   circle:
@@ -26,9 +33,12 @@ functions:
           rate: cron(*/1 * * * ? *)
 
 plugins:
-  - serverless-python-requirements
-
+  - serverless-layers
+  - serverless-deployment-bucket
 custom:
-  pythonRequirements:
-    dockerizePip: true
-    slim: true
+  serverless-layers:
+    dependenciesPath: ./requirements.txt
+  deploymentBucket:
+    versioning: true
+    accelerate: true
+    blockPublicAccess: true

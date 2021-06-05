@@ -19,8 +19,8 @@ provider:
 package:
   patterns:
   - '!.circleci/**'
-  - requirements.txt
-  - README.md
+  - '!requirements.txt'
+  - '!README.md'
 
 functions:
   circle:

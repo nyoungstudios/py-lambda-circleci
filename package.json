@@ -12,6 +12,7 @@
   },
   "homepage": "https://github.com/nyoungstudios/circle-test#readme",
   "devDependencies": {
-    "serverless-python-requirements": "^5.1.1"
+    "serverless-deployment-bucket": "^1.5.1",
+    "serverless-layers": "^2.3.3"
   }
 }

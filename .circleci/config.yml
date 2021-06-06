@@ -16,13 +16,13 @@ jobs:
              - v1-python-versions
        - run:
            name: Install Python
-             command: |
-               [ ! -d "/home/circleci/.pyenv" ] && curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
-               export PATH="/home/circleci/.pyenv/bin:$PATH"
-               eval "$(pyenv init -)"
-               pyenv install 3.8.10 --skip-existing
-               pyenv global 3.8.10
-               echo "Installed Python versions"
+           command: |
+             [ ! -d "/home/circleci/.pyenv" ] && curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
+             export PATH="/home/circleci/.pyenv/bin:$PATH"
+             eval "$(pyenv init -)"
+             pyenv install 3.8.10 --skip-existing
+             pyenv global 3.8.10
+             echo "Installed Python versions"
        - save_cache:
            paths:
              - /home/circleci/.pyenv/

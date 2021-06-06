@@ -4,7 +4,6 @@ version: 2.1
 orbs:
    aws-cli: circleci/aws-cli@2.0
    serverless: circleci/serverless-framework@1.0
-   python: circleci/python@1.4.0
 jobs:
    deploy:
      executor: serverless/default
@@ -12,12 +11,27 @@ jobs:
        - checkout
        - aws-cli/setup
        - serverless/setup
-       - python/dist
+       - restore_cache:
+           keys:
+             - v1-python-versions
        - run:
-           name: "Install npm packages"
+           name: Install Python
+             command: |
+               [ ! -d "/home/circleci/.pyenv" ] && curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
+               export PATH="/home/circleci/.pyenv/bin:$PATH"
+               eval "$(pyenv init -)"
+               pyenv install 3.8.10 --skip-existing
+               pyenv global 3.8.10
+               echo "Installed Python versions"
+       - save_cache:
+           paths:
+             - /home/circleci/.pyenv/
+           key: v1-python-versions
+       - run:
+           name: Install npm packages
            command: npm i
        - run:
-           name: "Deploy"
+           name: Deploy
            command: sls deploy -v
 
 workflows:

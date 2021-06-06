@@ -38,6 +38,8 @@ plugins:
 custom:
   serverless-layers:
     dependenciesPath: ./requirements.txt
+    compatibleRuntimes:
+      - python3.8
   deploymentBucket:
     versioning: true
     accelerate: true

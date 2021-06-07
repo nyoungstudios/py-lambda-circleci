@@ -3,7 +3,7 @@
 version: 2.1
 orbs:
    aws-cli: circleci/aws-cli@2.0
-   serverless: circleci/serverless-framework@1.0
+
 jobs:
    deploy:
      docker:
@@ -11,7 +11,13 @@ jobs:
      steps:
        - checkout
        - aws-cli/setup
-       - serverless/setup
+       - run:
+           name: Install Serverless CLI
+           command: |
+             # install
+             curl -o- -L https://slss.io/install | bash
+             echo 'export PATH=$HOME/.serverless/bin:$PATH' >> "$BASH_ENV"
+             source "$BASH_ENV"
 
 workflows:
   step-one:

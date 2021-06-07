@@ -3,7 +3,6 @@
 version: 2.1
 orbs:
    aws-cli: circleci/aws-cli@2.0
-   serverless: circleci/serverless-framework@1.0
 jobs:
    deploy:
      docker:
@@ -11,13 +10,6 @@ jobs:
      steps:
        - checkout
        - aws-cli/setup
-       - serverless/setup
-       - run:
-           name: Install npm packages
-           command: npm i
-       - run:
-           name: Deploy
-           command: sls deploy -v
 
 workflows:
   step-one:

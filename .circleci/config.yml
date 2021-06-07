@@ -18,6 +18,12 @@ jobs:
              curl -o- -L https://slss.io/install | bash
              echo 'export PATH=$HOME/.serverless/bin:$PATH' >> "$BASH_ENV"
              source "$BASH_ENV"
+       - run:
+           name: Install npm packages
+           command: npm i
+       - run:
+           name: Deploy
+           command: sls deploy -v
 
 workflows:
   step-one:

@@ -21,6 +21,7 @@ package:
   - '!.circleci/**'
   - '!requirements.txt'
   - '!README.md'
+  - '!circleci-aws-iam.json'
 
 functions:
   circle:

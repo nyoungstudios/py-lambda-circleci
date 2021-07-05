@@ -1,6 +1,6 @@
 # Python AWS Lambda Serverless CircleCI Template
 
-This is a simple template to setup a Python cron job as an AWS CloudFormation stack with a Lambda function and automatically deploy it with CircleCI.
+This is a simple template to setup a Python cron job as an AWS CloudFormation stack with a Lambda function and automatically deploy it using the Serverless framework on CircleCI.
 
 ## Features
 

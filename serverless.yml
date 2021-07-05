@@ -1,6 +1,6 @@
 # reference: https://www.serverless.com/framework/docs/providers/aws/guide/serverless.yml/
 
-service: circle-test
+service: py-lambda-circleci
 
 frameworkVersion: '2'
 
@@ -29,8 +29,8 @@ functions:
     maximumRetryAttempts: 0
     events:
       - schedule:
-          description: Calls CircleCI lambda function
-          rate: cron(*/1 * * * ? *)
+          description: Calls CircleCI lambda function every hour
+          rate: cron(0 */1 * * ? *)
 
 plugins:
   - serverless-layers

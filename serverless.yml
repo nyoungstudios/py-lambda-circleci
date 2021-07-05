@@ -30,7 +30,7 @@ functions:
     maximumRetryAttempts: 0
     events:
       - schedule:
-          description: Calls CircleCI lambda function every hour
+          description: Calls AWS Lambda function every hour
           rate: cron(0 */1 * * ? *)
 
 plugins:

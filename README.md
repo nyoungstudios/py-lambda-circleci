@@ -20,3 +20,7 @@ Additionally, I have setup a simple [Python function](./logging_setup.py) so you
 6. Within the project on CircleCI, click the `Project Settings` button (on the top right side).
 7. Within the `Project Settings`, click on the tab `Environment Variables` and set the environment variables `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` from the AWS User that you just created. Additionally, you can set the `AWS_DEFAULT_REGION` too.
 8. And that's it! Now, whenever you push to your GitHub repository, your code will automatically be deployed as a CloudFormation stack.
+
+## Python Versions
+
+This template uses `Python 3.8`, but if you prefer to use a different Python version, just change `3.8` in [serverless.yml](./serverless.yml) and [config.yml](.circleci/config.yml) to whatever version you like. Here are the supported [AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html) Python runtimes. Also, here are the CircleCI Python [Docker images](https://circleci.com/developer/images/image/cimg/python) that you can for deploying.

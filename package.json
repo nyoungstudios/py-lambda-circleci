@@ -13,6 +13,6 @@
   "homepage": "https://github.com/nyoungstudios/circle-test#readme",
   "devDependencies": {
     "serverless-deployment-bucket": "^1.5.1",
-    "serverless-layers": "^2.3.3"
+    "serverless-layers": "^2.4.0"
   }
 }

@@ -27,7 +27,7 @@ package:
 
 functions:
   circle:
-    handler: handler.lambda_handler
+    handler: src.handler.lambda_handler
     description: AWS Lambda function to test CircleCI
     maximumRetryAttempts: 0
     events:

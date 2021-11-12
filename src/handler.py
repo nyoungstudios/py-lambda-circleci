@@ -1,5 +1,5 @@
 import requests
-from logging_setup import get_logger
+from src.logging_setup import get_logger
 
 def lambda_handler(event, context):
     logger = get_logger('test')

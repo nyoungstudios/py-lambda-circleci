@@ -8,7 +8,7 @@ This template uses a couple of Serverless plugins to make deploying the CloudFor
 - [`serverless-layers`](https://www.serverless.com/plugins/serverless-layers) allows you to install the Python packages in the [requirements.txt](./requirements.txt) file to a separate Lambda layer which reduces the size of your code layer.
 - [`serverless-deployment-bucket`](https://www.serverless.com/plugins/serverless-deployment-bucket) allows us to manage the S3 deployment bucket versioning and permissions.
 
-Additionally, I have setup a simple [Python function](./logging_setup.py) so you can setup a logger for your project without getting double prints in AWS CloudWatch.
+Additionally, I have setup a simple [Python function](src/logging_setup.py) so you can setup a logger for your project without getting double prints in AWS CloudWatch.
 
 ## How to Setup?
 

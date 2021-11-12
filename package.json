@@ -4,13 +4,13 @@
   "description": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nyoungstudios/circle-test.git"
+    "url": "git+https://github.com/nyoungstudios/py-lambda-circleci.git"
   },
   "author": "Nathaniel Young",
   "bugs": {
-    "url": "https://github.com/nyoungstudios/circle-test/issues"
+    "url": "https://github.com/nyoungstudios/py-lambda-circleci/issues"
   },
-  "homepage": "https://github.com/nyoungstudios/circle-test#readme",
+  "homepage": "https://github.com/nyoungstudios/py-lambda-circleci#readme",
   "devDependencies": {
     "serverless-deployment-bucket": "^1.5.1",
     "serverless-layers": "^2.5.1"

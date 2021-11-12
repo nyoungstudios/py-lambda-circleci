@@ -30,4 +30,7 @@ jobs:
 workflows:
   deploy:
     jobs:
-      - deploy
+      - deploy:
+          filters:
+            branches:
+              only: main

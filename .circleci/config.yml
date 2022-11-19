@@ -25,7 +25,7 @@ jobs:
          command: npm i
      - run:
          name: Deploy
-         command: sls deploy -v
+         command: sls deploy --verbose
 
 workflows:
   deploy:
